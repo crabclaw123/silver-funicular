@@ -16,7 +16,6 @@ def load_volume_goals():
     return {}
 
 def volume_overview(workouts):
-    goals = load_volume_goals()
     st.subheader("📊 Weekly Volume Tracker")
 
     today = datetime.date.today()
@@ -34,6 +33,7 @@ def volume_overview(workouts):
 
     if volume_by_muscle:
         st.write("### Weekly Volume Summary")
+        goals = load_volume_goals()
         cols = st.columns(len(volume_by_muscle))
         for idx, (muscle, sets) in enumerate(sorted(volume_by_muscle.items())):
             with cols[idx]:
