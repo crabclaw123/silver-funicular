@@ -9,7 +9,6 @@ WORKOUT_LOG_FILE = "workout_log.json"
 IN_PROGRESS_FILE = "in_progress_workout.json"
 
 def display_workout_history():
-    # Session state to manage deferred deletes
     if "delete_workout_idx" not in st.session_state:
         st.session_state.delete_workout_idx = None
     if "delete_exercise" not in st.session_state:
@@ -17,16 +16,14 @@ def display_workout_history():
     if "safe_delete_ran" not in st.session_state:
         st.session_state.safe_delete_ran = False
 
-    # Load saved workouts
     workouts = load_workouts()
 
-    # Handle any deferred deletes first, *before UI renders*
     if not st.session_state.safe_delete_ran:
         if st.session_state.delete_exercise:
             i, j = st.session_state.delete_exercise
             try:
                 workouts[i]["exercises"].pop(j)
-                save_all_workouts(workouts)  # ✅ FIXED
+                save_all_workouts(workouts)
             except IndexError:
                 st.warning("Couldn't delete exercise. Index out of range.")
             st.session_state.delete_exercise = None
@@ -36,14 +33,13 @@ def display_workout_history():
         if st.session_state.delete_workout_idx is not None:
             try:
                 workouts.pop(st.session_state.delete_workout_idx)
-                save_all_workouts(workouts)  # ✅ FIXED
+                save_all_workouts(workouts)
             except IndexError:
                 st.warning("Couldn't delete workout. Index out of range.")
             st.session_state.delete_workout_idx = None
             st.session_state.safe_delete_ran = True
             st.rerun()
 
-    # Normal display logic
     st.subheader("📜 Workout History")
     if not workouts:
         st.info("No workouts logged yet.")
@@ -56,7 +52,6 @@ def display_workout_history():
         with st.expander(f"{entry['date']} — {entry.get('type', 'Unknown')}"):
             edited = False
 
-            # Allow date editing
             new_date = st.date_input("Edit Date", value=datetime.strptime(entry['date'], "%Y-%m-%d").date(), key=f"edit_date_{i}")
             new_date_str = new_date.strftime("%Y-%m-%d")
             if new_date_str != entry["date"]:
@@ -66,7 +61,32 @@ def display_workout_history():
             for j, exercise in enumerate(entry.get("exercises", [])):
                 st.markdown(f"**{exercise['muscle_group']} - {exercise['exercise']}**")
                 equipment = exercise.get("equipment", "")
-                st.text(f"Equipment: {equipment}")
+                muscle_group = exercise.get("muscle_group", "Other")
+
+                muscle_group_options = [
+                    "Chest", "Back", "Shoulders", "Arms", "Biceps", "Triceps", "Quads","Legs",
+                    "Hamstrings", "Glutes", "Calves", "Forearms", "Core", "Full Body", "Other"
+                ]
+                new_muscle = st.selectbox(
+                    "Edit Muscle Group",
+                    muscle_group_options,
+                    index=muscle_group_options.index(muscle_group) if muscle_group in muscle_group_options else 0,
+                    key=f"edit_muscle_group_{i}_{j}"
+                )
+                if new_muscle != muscle_group:
+                    exercise["muscle_group"] = new_muscle
+                    edited = True
+
+                new_equipment = st.selectbox(
+                    "Edit Equipment",
+                    ["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"],
+                    index=["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"].index(equipment)
+                    if equipment in ["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"] else 0,
+                    key=f"edit_equipment_{i}_{j}"
+                )
+                if new_equipment != equipment:
+                    exercise["equipment"] = new_equipment
+                    edited = True
 
                 for s_idx, s in enumerate(exercise.get("sets", [])):
                     cols = st.columns(2)
@@ -82,19 +102,9 @@ def display_workout_history():
                             value=int(s["reps"]),
                             key=f"edit_reps_{i}_{j}_{s_idx}"
                         )
-                    s["weight"], s["reps"] = weight, reps
-
-                new_equipment = st.selectbox(
-                    "Edit Equipment",
-                    ["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"],
-                    index=["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"].index(equipment)
-                    if equipment in ["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"] else 0,
-                    key=f"edit_equipment_{i}_{j}"
-                )
-
-                if new_equipment != equipment:
-                    exercise["equipment"] = new_equipment
-                    edited = True
+                    if weight != s["weight"] or reps != s["reps"]:
+                        s["weight"], s["reps"] = weight, reps
+                        edited = True
 
                 if st.button(f"❌ Delete Exercise", key=f"delete_ex_{i}_{j}"):
                     st.session_state.delete_exercise = (i, j)
@@ -107,10 +117,9 @@ def display_workout_history():
                 st.rerun()
 
             if edited:
-                save_all_workouts(workouts)  # ✅ FIXED
+                save_all_workouts(workouts)
                 st.success("Edits saved!")
 
-# --- In-Progress Management ---
 def load_in_progress_workout():
     if os.path.exists(IN_PROGRESS_FILE):
         with open(IN_PROGRESS_FILE, "r") as f:
