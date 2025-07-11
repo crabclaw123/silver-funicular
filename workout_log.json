@@ -321,5 +321,137 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2025-07-11",
+    "type": "Volume",
+    "exercises": [
+      {
+        "muscle_group": "Legs",
+        "exercise": "Hack Squat",
+        "equipment": "Machine",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 245.0
+          },
+          {
+            "reps": 9,
+            "weight": 215.0
+          },
+          {
+            "reps": 8,
+            "weight": 215.0
+          },
+          {
+            "reps": 8,
+            "weight": 195.0
+          }
+        ]
+      },
+      {
+        "muscle_group": "Legs",
+        "exercise": "Leg extensions",
+        "equipment": "Machine",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 150.0
+          },
+          {
+            "reps": 8,
+            "weight": 130.0
+          },
+          {
+            "reps": 10,
+            "weight": 85.0
+          }
+        ]
+      },
+      {
+        "muscle_group": "Shoulders",
+        "exercise": "Lateral Raises",
+        "equipment": "Cable",
+        "sets": [
+          {
+            "reps": 14,
+            "weight": 12.5
+          },
+          {
+            "reps": 13,
+            "weight": 9.0
+          },
+          {
+            "reps": 9,
+            "weight": 12.0
+          },
+          {
+            "reps": 9,
+            "weight": 7.5
+          }
+        ]
+      },
+      {
+        "muscle_group": "Arms",
+        "exercise": "Hammer Curls",
+        "equipment": "Cable",
+        "sets": [
+          {
+            "reps": 16,
+            "weight": 25.0
+          },
+          {
+            "reps": 12,
+            "weight": 25.0
+          },
+          {
+            "reps": 10,
+            "weight": 25.0
+          },
+          {
+            "reps": 10,
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "muscle_group": "Core",
+        "exercise": "Ab Crunch",
+        "equipment": "Machine",
+        "sets": [
+          {
+            "reps": 13,
+            "weight": 45.0
+          },
+          {
+            "reps": 15,
+            "weight": 45.0
+          },
+          {
+            "reps": 16,
+            "weight": 45.0
+          }
+        ]
+      },
+      {
+        "muscle_group": "Core",
+        "exercise": "Ab Crunch",
+        "equipment": "Machine",
+        "sets": [
+          {
+            "reps": 13,
+            "weight": 45.0
+          },
+          {
+            "reps": 15,
+            "weight": 45.0
+          },
+          {
+            "reps": 16,
+            "weight": 45.0
+          }
+        ]
+      }
+    ]
   }
 ]
