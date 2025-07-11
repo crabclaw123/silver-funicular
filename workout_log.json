@@ -453,5 +453,22 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2025-07-11",
+    "type": "Volume",
+    "exercises": [
+      {
+        "muscle_group": "Chest",
+        "exercise": "Hack Squat",
+        "equipment": "Dumbbell",
+        "sets": [
+          {
+            "reps": 1,
+            "weight": 0.07654
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -1,6 +1,7 @@
 import streamlit as st
 from data_handler import save_workout, load_in_progress_workout, save_in_progress_workout, clear_in_progress_workout
 import datetime
+from exercise_manager import load_saved_exercises, save_saved_exercises
 
 def workout_logger():
     st.subheader("📋 Log Your Workout (Multiple Exercises)")
@@ -18,13 +19,49 @@ def workout_logger():
     workout_type = st.selectbox("Workout Focus", ["Volume", "Intensity", "Mixed"])
 
     st.markdown("### ➕ Add an Exercise")
-    muscle_group = st.selectbox("Muscle Group", [
-        "Chest", "Back", "Legs", "Shoulders", "Arms", "Glutes", "Core", "Forearms", "Calves"
-    ])
-    exercise_name = st.text_input("Exercise Name")
-    equipment = st.selectbox("Equipment Used", ["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"])
-    num_sets = st.number_input("Number of Sets", min_value=1, max_value=10, step=1, key="num_sets")
 
+    saved_exercises = load_saved_exercises()
+    exercise_options = [ex["name"] for ex in saved_exercises]
+    selected_name = st.selectbox("Select Exercise", exercise_options + ["➕ Create New"], key="exercise_select")
+
+    # Default fallbacks
+    exercise_name = ""
+    muscle_group = "Other"
+    equipment = "Other"
+
+    if selected_name == "➕ Create New":
+        exercise_name = st.text_input("New Exercise Name", key="new_ex_name")
+        muscle_group = st.selectbox("Muscle Group", [
+            "Chest", "Back", "Legs", "Shoulders", "Arms", "Glutes", "Core", "Forearms", "Calves", "Other"
+        ], key="new_muscle")
+        equipment = st.selectbox("Equipment Used", [
+            "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"
+        ], key="new_equipment")
+
+        if st.button("💾 Save Exercise for Later (Don't Log)"):
+            new_ex = {
+                "name": exercise_name.strip(),
+                "muscle_group": muscle_group,
+                "equipment": equipment,
+                "tags": [],
+                "favorite": False
+            }
+            if new_ex["name"] and new_ex["name"] not in exercise_options:
+                saved_exercises.append(new_ex)
+                save_saved_exercises(saved_exercises)
+                st.success(f"Saved '{exercise_name}' to your exercise library!")
+                st.rerun()
+            else:
+                st.error("Please enter a unique and valid exercise name.")
+
+    else:
+        selected_ex = next((ex for ex in saved_exercises if ex["name"] == selected_name), None)
+        if selected_ex:
+            exercise_name = selected_ex["name"]
+            muscle_group = selected_ex.get("muscle_group", "Other")
+            equipment = selected_ex.get("equipment", "Other")
+
+    num_sets = st.number_input("Number of Sets", min_value=1, max_value=10, step=1, key="num_sets")
     temp_sets = []
     st.markdown("### 🏋️ Log Sets")
     for i in range(num_sets):
@@ -64,7 +101,6 @@ def workout_logger():
             st.session_state.log_triggered = True
             st.rerun()
 
-    # Only log once after rerun
     if st.session_state.log_triggered and not st.session_state.workout_logged:
         workout_entry = {
             "date": str(date),
@@ -77,4 +113,3 @@ def workout_logger():
         st.session_state.workout_logged = True
         st.session_state.log_triggered = False
         st.success("Workout successfully logged!")
-

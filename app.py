@@ -6,10 +6,12 @@ from history import display_workout_history
 from nutrition import nutrition_strategy_tip
 from progression import progression_engine
 from volume_goals import volume_goal_ui
+from exercise_manager import manage_saved_exercises
+
 
 st.set_page_config(page_title="Hypertrophy App", layout="wide")
 
-st.title("🏋️ Hypertrophy Training App")
+st.title("🏋️ Hypertrophy Tracker")
 
 # Load data
 workouts = load_workouts()
@@ -23,7 +25,9 @@ page = st.sidebar.radio("Select a page:", [
     "Diet Tips",
     "Progression Suggestions",
     "Volume Overview",
-    "Set Volume Goals"  # ← new page option
+    "Set Volume Goals",
+    "Exercise Library",
+    "Tonnage Tracker"  # ← new page option
 ])
 
 # Main display logic
@@ -46,3 +50,8 @@ elif page == "Progression Suggestions":
         progression_engine(selected_exercise)
 elif page == "Volume Overview":
     volume_overview(workouts)
+elif page == "Exercise Library":
+    manage_saved_exercises()
+elif page == "Tonnage Tracker":
+    from tonnage import tonnage_tracker
+    tonnage_tracker()

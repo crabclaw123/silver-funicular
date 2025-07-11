@@ -1,0 +1,13 @@
+[
+  {
+    "muscle_group": "Chest",
+    "exercise": "Hack Squat",
+    "equipment": "Dumbbell",
+    "sets": [
+      {
+        "reps": 1,
+        "weight": 0.0
+      }
+    ]
+  }
+]
