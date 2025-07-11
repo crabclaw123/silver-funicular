@@ -28,6 +28,7 @@ def workout_logger():
     exercise_name = ""
     muscle_group = "Other"
     equipment = "Other"
+    tags = []
 
     if selected_name == "➕ Create New":
         exercise_name = st.text_input("New Exercise Name", key="new_ex_name")
@@ -35,15 +36,23 @@ def workout_logger():
             "Chest", "Back", "Legs", "Shoulders", "Arms", "Glutes", "Core", "Forearms", "Calves", "Other"
         ], key="new_muscle")
         equipment = st.selectbox("Equipment Used", [
-            "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"
+            "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Smith Machine", "Other"
         ], key="new_equipment")
+        tags = st.multiselect("Targeted Muscle Tags (optional)", [
+            "Lateral Head", "Long Head", "Medial Head",
+            "Upper Chest", "Lower Chest",
+            "Biceps Long Head", "Biceps Short Head",
+            "Hamstrings", "Quads", "Glutes",
+            "Anterior Deltoid", "Lateral Deltoid", "Posterior Deltoid",
+            "Upper Back", "Lower Back", "Spinal Erectors", "Traps", "Forearms", "Latissimus Dorsi"
+        ], key="sub_tags")
 
         if st.button("💾 Save Exercise for Later (Don't Log)"):
             new_ex = {
                 "name": exercise_name.strip(),
                 "muscle_group": muscle_group,
                 "equipment": equipment,
-                "tags": [],
+                "tags": tags,
                 "favorite": False
             }
             if new_ex["name"] and new_ex["name"] not in exercise_options:
@@ -60,6 +69,7 @@ def workout_logger():
             exercise_name = selected_ex["name"]
             muscle_group = selected_ex.get("muscle_group", "Other")
             equipment = selected_ex.get("equipment", "Other")
+            tags = selected_ex.get("tags", [])
 
     num_sets = st.number_input("Number of Sets", min_value=1, max_value=10, step=1, key="num_sets")
     temp_sets = []
@@ -79,7 +89,8 @@ def workout_logger():
                 "muscle_group": muscle_group,
                 "exercise": exercise_name.strip(),
                 "equipment": equipment,
-                "sets": temp_sets
+                "sets": temp_sets,
+                "tags": tags
             }
             st.session_state.today_workout.append(new_ex)
             save_in_progress_workout(st.session_state.today_workout)

@@ -7,6 +7,8 @@ from nutrition import nutrition_strategy_tip
 from progression import progression_engine
 from volume_goals import volume_goal_ui
 from exercise_manager import manage_saved_exercises
+from tonnage_comparison import tonnage_comparison
+
 
 
 st.set_page_config(page_title="Hypertrophy App", layout="wide")
@@ -27,7 +29,8 @@ page = st.sidebar.radio("Select a page:", [
     "Volume Overview",
     "Set Volume Goals",
     "Exercise Library",
-    "Tonnage Tracker"  # ← new page option
+    "Tonnage Tracker",
+    "Tonnage Comparison"  # ← new page option
 ])
 
 # Main display logic
@@ -55,3 +58,6 @@ elif page == "Exercise Library":
 elif page == "Tonnage Tracker":
     from tonnage import tonnage_tracker
     tonnage_tracker()
+elif page == "Tonnage Comparison":
+    tonnage_comparison()
+

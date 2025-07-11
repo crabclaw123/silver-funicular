@@ -34,9 +34,9 @@ def manage_saved_exercises():
             ].index(ex["muscle_group"]), key=f"muscle_{i}")
 
             equipment = cols[2].selectbox("Equipment", [
-                "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"
+                "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Smith Machine", "Other"
             ], index=[
-                "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"
+                "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Smith Machine", "Other"
             ].index(ex["equipment"]), key=f"equipment_{i}")
 
             favorite = cols[3].checkbox("⭐ Favorite", value=ex.get("favorite", False), key=f"fav_{i}")
@@ -69,7 +69,7 @@ def manage_saved_exercises():
         "Chest", "Back", "Shoulders", "Arms", "Biceps", "Triceps", "Quads",
         "Hamstrings", "Glutes", "Calves", "Forearms", "Core", "Full Body", "Other"
     ])
-    new_equipment = st.selectbox("Equipment", ["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Other"])
+    new_equipment = st.selectbox("Equipment", ["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Smith Machine", "Other"])
     new_tags = st.text_input("Tags (comma separated)")
     new_favorite = st.checkbox("⭐ Mark as Favorite")
 

@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "name": "Incline Press",
+    "muscle_group": "Chest",
+    "equipment": "Smith Machine",
+    "tags": [],
+    "favorite": true
+  },
+  {
+    "name": "Supine Press",
+    "muscle_group": "Chest",
+    "equipment": "Machine",
+    "tags": [],
+    "favorite": false
+  }
+]

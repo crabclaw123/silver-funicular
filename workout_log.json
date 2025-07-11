@@ -5,102 +5,109 @@
     "exercises": [
       {
         "muscle_group": "Chest",
-        "exercise": "Incline Smith Machine Press",
+        "exercise": "Incline Press",
         "sets": [
           {
-            "reps": 8,
-            "weight": 130.0
+            "weight": 130.0,
+            "reps": 8
           },
           {
-            "reps": 5,
-            "weight": 130.0
+            "weight": 130.0,
+            "reps": 5
           },
           {
-            "reps": 5,
-            "weight": 130.0
+            "weight": 130.0,
+            "reps": 5
           },
           {
-            "reps": 5,
-            "weight": 130.0
+            "weight": 130.0,
+            "reps": 5
           }
         ],
-        "equipment": "Dumbbell"
+        "equipment": "Dumbbell",
+        "tags": [
+          "Upper Chest"
+        ]
       },
       {
         "muscle_group": "Back",
         "exercise": "Lateral Raises",
         "sets": [
           {
-            "reps": 12,
-            "weight": 12.0
+            "weight": 12.0,
+            "reps": 12
           },
           {
-            "reps": 12,
-            "weight": 12.0
+            "weight": 12.0,
+            "reps": 12
           },
           {
-            "reps": 12,
-            "weight": 12.0
+            "weight": 12.0,
+            "reps": 12
           }
         ],
-        "equipment": "Dumbbell"
+        "equipment": "Dumbbell",
+        "tags": []
       },
       {
         "muscle_group": "Shoulders",
         "exercise": "cable rear delt flies",
         "sets": [
           {
-            "reps": 17,
-            "weight": 7.0
+            "weight": 7.0,
+            "reps": 17
           },
           {
-            "reps": 17,
-            "weight": 7.0
+            "weight": 7.0,
+            "reps": 17
           },
           {
-            "reps": 13,
-            "weight": 7.0
+            "weight": 7.0,
+            "reps": 13
           }
         ],
-        "equipment": "Dumbbell"
+        "equipment": "Dumbbell",
+        "tags": []
       },
       {
         "muscle_group": "Core",
-        "exercise": "Ab crunch machine",
+        "exercise": "Ab Crunch",
         "sets": [
           {
-            "reps": 14,
-            "weight": 40.0
+            "weight": 40.0,
+            "reps": 14
           },
           {
-            "reps": 14,
-            "weight": 40.0
+            "weight": 40.0,
+            "reps": 14
           },
           {
-            "reps": 14,
-            "weight": 40.0
+            "weight": 40.0,
+            "reps": 14
           }
         ],
-        "equipment": "Dumbbell"
+        "equipment": "Dumbbell",
+        "tags": []
       },
       {
         "muscle_group": "Arms",
         "exercise": "Cable Tricep Push Down",
         "sets": [
           {
-            "reps": 12,
-            "weight": 57.0
+            "weight": 57.0,
+            "reps": 12
           },
           {
-            "reps": 10,
-            "weight": 50.0
+            "weight": 50.0,
+            "reps": 10
           },
           {
-            "reps": 10,
-            "weight": 50.0
+            "weight": 50.0,
+            "reps": 10
           }
         ],
-        "equipment": "Dumbbell"
+        "equipment": "Dumbbell",
+        "tags": []
       }
     ]
   },
@@ -114,22 +121,23 @@
         "equipment": "Machine",
         "sets": [
           {
-            "reps": 9,
-            "weight": 205.0
+            "weight": 205.0,
+            "reps": 9
           },
           {
-            "reps": 5,
-            "weight": 205.0
+            "weight": 205.0,
+            "reps": 5
           },
           {
-            "reps": 5,
-            "weight": 205.0
+            "weight": 205.0,
+            "reps": 5
           },
           {
-            "reps": 8,
-            "weight": 185.0
+            "weight": 185.0,
+            "reps": 8
           }
-        ]
+        ],
+        "tags": []
       },
       {
         "muscle_group": "Back",
@@ -137,18 +145,19 @@
         "equipment": "Cable",
         "sets": [
           {
-            "reps": 4,
-            "weight": 160.0
+            "weight": 160.0,
+            "reps": 4
           },
           {
-            "reps": 10,
-            "weight": 140.0
+            "weight": 140.0,
+            "reps": 10
           },
           {
-            "reps": 10,
-            "weight": 120.0
+            "weight": 120.0,
+            "reps": 10
           }
-        ]
+        ],
+        "tags": []
       },
       {
         "muscle_group": "Shoulders",
@@ -156,18 +165,19 @@
         "equipment": "Cable",
         "sets": [
           {
-            "reps": 12,
-            "weight": 12.5
+            "weight": 12.5,
+            "reps": 12
           },
           {
-            "reps": 12,
-            "weight": 12.5
+            "weight": 12.5,
+            "reps": 12
           },
           {
-            "reps": 12,
-            "weight": 12.5
+            "weight": 12.5,
+            "reps": 12
           }
-        ]
+        ],
+        "tags": []
       },
       {
         "muscle_group": "Arms",
@@ -175,18 +185,19 @@
         "equipment": "Cable",
         "sets": [
           {
-            "reps": 12,
-            "weight": 12.5
+            "weight": 12.5,
+            "reps": 12
           },
           {
-            "reps": 12,
-            "weight": 12.5
+            "weight": 12.5,
+            "reps": 12
           },
           {
-            "reps": 12,
-            "weight": 12.5
+            "weight": 12.5,
+            "reps": 12
           }
-        ]
+        ],
+        "tags": []
       },
       {
         "muscle_group": "Forearms",
@@ -194,18 +205,19 @@
         "equipment": "Barbell",
         "sets": [
           {
-            "reps": 15,
-            "weight": 40.0
+            "weight": 40.0,
+            "reps": 15
           },
           {
-            "reps": 12,
-            "weight": 40.0
+            "weight": 40.0,
+            "reps": 12
           },
           {
-            "reps": 12,
-            "weight": 40.0
+            "weight": 40.0,
+            "reps": 12
           }
-        ]
+        ],
+        "tags": []
       }
     ]
   },
@@ -219,22 +231,23 @@
         "equipment": "Cable",
         "sets": [
           {
-            "reps": 11,
-            "weight": 165.0
+            "weight": 165.0,
+            "reps": 11
           },
           {
-            "reps": 5,
-            "weight": 165.0
+            "weight": 165.0,
+            "reps": 5
           },
           {
-            "reps": 8,
-            "weight": 145.0
+            "weight": 145.0,
+            "reps": 8
           },
           {
-            "reps": 7,
-            "weight": 125.0
+            "weight": 125.0,
+            "reps": 7
           }
-        ]
+        ],
+        "tags": []
       },
       {
         "muscle_group": "Legs",
@@ -242,18 +255,19 @@
         "equipment": "Machine",
         "sets": [
           {
-            "reps": 11,
-            "weight": 170.0
+            "weight": 170.0,
+            "reps": 11
           },
           {
-            "reps": 9,
-            "weight": 170.0
+            "weight": 170.0,
+            "reps": 9
           },
           {
-            "reps": 7,
-            "weight": 170.0
+            "weight": 170.0,
+            "reps": 7
           }
-        ]
+        ],
+        "tags": []
       },
       {
         "muscle_group": "Arms",
@@ -261,22 +275,23 @@
         "equipment": "Machine",
         "sets": [
           {
-            "reps": 8,
-            "weight": 110.0
+            "weight": 110.0,
+            "reps": 8
           },
           {
-            "reps": 5,
-            "weight": 95.0
+            "weight": 95.0,
+            "reps": 5
           },
           {
-            "reps": 4,
-            "weight": 95.0
+            "weight": 95.0,
+            "reps": 4
           },
           {
-            "reps": 4,
-            "weight": 80.0
+            "weight": 80.0,
+            "reps": 4
           }
-        ]
+        ],
+        "tags": []
       },
       {
         "muscle_group": "Shoulders",
@@ -284,22 +299,23 @@
         "equipment": "Machine",
         "sets": [
           {
-            "reps": 15,
-            "weight": 110.0
+            "weight": 110.0,
+            "reps": 15
           },
           {
-            "reps": 23,
-            "weight": 110.0
+            "weight": 110.0,
+            "reps": 23
           },
           {
-            "reps": 20,
-            "weight": 110.0
+            "weight": 110.0,
+            "reps": 20
           },
           {
-            "reps": 20,
-            "weight": 110.0
+            "weight": 110.0,
+            "reps": 20
           }
-        ]
+        ],
+        "tags": []
       },
       {
         "muscle_group": "Forearms",
@@ -307,23 +323,24 @@
         "equipment": "Barbell",
         "sets": [
           {
-            "reps": 15,
-            "weight": 40.0
+            "weight": 40.0,
+            "reps": 15
           },
           {
-            "reps": 12,
-            "weight": 40.0
+            "weight": 40.0,
+            "reps": 12
           },
           {
-            "reps": 11,
-            "weight": 40.0
+            "weight": 40.0,
+            "reps": 11
           }
-        ]
+        ],
+        "tags": []
       }
     ]
   },
   {
-    "date": "2025-07-11",
+    "date": "2025-07-10",
     "type": "Volume",
     "exercises": [
       {
@@ -332,21 +349,25 @@
         "equipment": "Machine",
         "sets": [
           {
-            "reps": 8,
-            "weight": 245.0
+            "weight": 245.0,
+            "reps": 8
           },
           {
-            "reps": 9,
-            "weight": 215.0
+            "weight": 215.0,
+            "reps": 9
           },
           {
-            "reps": 8,
-            "weight": 215.0
+            "weight": 215.0,
+            "reps": 8
           },
           {
-            "reps": 8,
-            "weight": 195.0
+            "weight": 195.0,
+            "reps": 8
           }
+        ],
+        "tags": [
+          "Quads",
+          "Glute Max"
         ]
       },
       {
@@ -355,17 +376,20 @@
         "equipment": "Machine",
         "sets": [
           {
-            "reps": 11,
-            "weight": 150.0
+            "weight": 150.0,
+            "reps": 11
           },
           {
-            "reps": 8,
-            "weight": 130.0
+            "weight": 130.0,
+            "reps": 8
           },
           {
-            "reps": 10,
-            "weight": 85.0
+            "weight": 85.0,
+            "reps": 10
           }
+        ],
+        "tags": [
+          "Quads"
         ]
       },
       {
@@ -374,21 +398,24 @@
         "equipment": "Cable",
         "sets": [
           {
-            "reps": 14,
-            "weight": 12.5
+            "weight": 12.5,
+            "reps": 14
           },
           {
-            "reps": 13,
-            "weight": 9.0
+            "weight": 9.0,
+            "reps": 13
           },
           {
-            "reps": 9,
-            "weight": 12.0
+            "weight": 12.0,
+            "reps": 9
           },
           {
-            "reps": 9,
-            "weight": 7.5
+            "weight": 7.5,
+            "reps": 9
           }
+        ],
+        "tags": [
+          "Lateral Delts"
         ]
       },
       {
@@ -397,21 +424,24 @@
         "equipment": "Cable",
         "sets": [
           {
-            "reps": 16,
-            "weight": 25.0
+            "weight": 25.0,
+            "reps": 16
           },
           {
-            "reps": 12,
-            "weight": 25.0
+            "weight": 25.0,
+            "reps": 12
           },
           {
-            "reps": 10,
-            "weight": 25.0
+            "weight": 25.0,
+            "reps": 10
           },
           {
-            "reps": 10,
-            "weight": 25.0
+            "weight": 25.0,
+            "reps": 10
           }
+        ],
+        "tags": [
+          "Biceps Long Head"
         ]
       },
       {
@@ -420,54 +450,161 @@
         "equipment": "Machine",
         "sets": [
           {
-            "reps": 13,
-            "weight": 45.0
+            "weight": 45.0,
+            "reps": 13
           },
           {
-            "reps": 15,
-            "weight": 45.0
+            "weight": 45.0,
+            "reps": 15
           },
           {
-            "reps": 16,
-            "weight": 45.0
+            "weight": 45.0,
+            "reps": 16
           }
-        ]
-      },
-      {
-        "muscle_group": "Core",
-        "exercise": "Ab Crunch",
-        "equipment": "Machine",
-        "sets": [
-          {
-            "reps": 13,
-            "weight": 45.0
-          },
-          {
-            "reps": 15,
-            "weight": 45.0
-          },
-          {
-            "reps": 16,
-            "weight": 45.0
-          }
+        ],
+        "tags": [
+          "Core"
         ]
       }
     ]
   },
   {
-    "date": "2025-07-11",
-    "type": "Volume",
+    "date": "2025-07-08",
+    "type": "Mixed",
     "exercises": [
       {
         "muscle_group": "Chest",
-        "exercise": "Hack Squat",
+        "exercise": "Incline Press",
         "equipment": "Dumbbell",
         "sets": [
           {
-            "reps": 1,
-            "weight": 0.07654
+            "weight": 130.0,
+            "reps": 12
+          },
+          {
+            "weight": 130.0,
+            "reps": 7
+          },
+          {
+            "weight": 110.0,
+            "reps": 6
+          },
+          {
+            "weight": 90.0,
+            "reps": 11
           }
+        ],
+        "tags": []
+      },
+      {
+        "muscle_group": "Back",
+        "exercise": "Straight Arm Pulldown",
+        "equipment": "Machine",
+        "sets": [
+          {
+            "weight": 52.5,
+            "reps": 12
+          },
+          {
+            "weight": 47.5,
+            "reps": 8
+          },
+          {
+            "weight": 42.5,
+            "reps": 7
+          },
+          {
+            "weight": 32.5,
+            "reps": 8
+          }
+        ],
+        "tags": [
+          "Latissimus Dorsi"
         ]
+      },
+      {
+        "muscle_group": "Shoulders",
+        "exercise": "Lateral Raise",
+        "equipment": "Machine",
+        "sets": [
+          {
+            "weight": 12.5,
+            "reps": 13
+          },
+          {
+            "weight": 9.0,
+            "reps": 12
+          },
+          {
+            "weight": 7.5,
+            "reps": 11
+          }
+        ],
+        "tags": []
+      },
+      {
+        "muscle_group": "Arms",
+        "exercise": "Unilateral Overhead Raise",
+        "equipment": "Machine",
+        "sets": [
+          {
+            "weight": 12.5,
+            "reps": 21
+          },
+          {
+            "weight": 7.5,
+            "reps": 22
+          }
+        ],
+        "tags": [
+          "Long Head"
+        ]
+      },
+      {
+        "muscle_group": "Arms",
+        "exercise": "Preacher Curls",
+        "equipment": "Machine",
+        "sets": [
+          {
+            "weight": 80.0,
+            "reps": 12
+          },
+          {
+            "weight": 80.0,
+            "reps": 7
+          },
+          {
+            "weight": 50.0,
+            "reps": 11
+          },
+          {
+            "weight": 50.0,
+            "reps": 10
+          }
+        ],
+        "tags": [
+          "Biceps Short Head"
+        ]
+      },
+      {
+        "muscle_group": "Forearms",
+        "exercise": "Reverse Curls",
+        "equipment": "Barbell",
+        "sets": [
+          {
+            "weight": 40.0,
+            "reps": 15
+          },
+          {
+            "weight": 40.0,
+            "reps": 13
+          },
+          {
+            "weight": 40.0,
+            "reps": 12
+          }
+        ],
+        "tags": []
       }
     ]
   }
