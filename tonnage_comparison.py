@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
+import math
 from datetime import datetime, timedelta
 from data_handler import load_workouts
-import math
 
 
 def tonnage_comparison():
@@ -32,13 +32,13 @@ def tonnage_comparison():
         st.info("No tonnage data available.")
         return
 
-    df["date"] = pd.to_datetime(df["date"]).dt.date
+    df["date"] = pd.to_datetime(df["date"])
 
     exercise_list = sorted(df["exercise"].unique())
     selected_exercise = st.selectbox("Select Exercise to Compare", exercise_list)
     time_range = st.selectbox("Time Range", ["Past 30 Days", "Past 3 Months", "Past Year", "All Time"])
 
-    today = datetime.today().date()
+    today = datetime.today()
     if time_range == "Past 30 Days":
         date_cutoff = today - timedelta(days=30)
     elif time_range == "Past 3 Months":
@@ -46,7 +46,7 @@ def tonnage_comparison():
     elif time_range == "Past Year":
         date_cutoff = today - timedelta(days=365)
     else:
-        date_cutoff = datetime.strptime("1900-01-01", "%Y-%m-%d").date()
+        date_cutoff = datetime.strptime("1900-01-01", "%Y-%m-%d")
 
     df_ex = df[df["exercise"] == selected_exercise].copy()
     df_ex = df_ex[df_ex["date"] >= date_cutoff]
@@ -55,7 +55,6 @@ def tonnage_comparison():
         st.warning("No workouts for this exercise in the selected time range.")
         return
 
-    df_ex["date"] = pd.to_datetime(df_ex["date"])
     df_ex = df_ex.sort_values("date")
     df_ex["Week"] = df_ex["date"].dt.to_period("W").apply(lambda r: r.start_time)
 
@@ -72,12 +71,12 @@ def tonnage_comparison():
         delta = f"(+{percent:.1f}% increase)" if change > 0 else f"({percent:.1f}% decrease)"
         st.success(f"Latest tonnage: `{latest_tonnage}` lbs — {delta}")
 
-    st.markdown("### 💡 Increase Tonnage Next Time")
-    method = st.radio("Select progression method:", ["Increase Reps", "Increase Weight"])
-    sets = latest["sets"]
-    target_increase = st.number_input("Target tonnage increase (lbs)", min_value=1.0, step=1.0)
+        st.markdown("### 💡 Increase Tonnage Next Time")
+        method = st.radio("Select progression method:", ["Increase Reps", "Increase Weight"])
 
-    if st.button("📈 Suggest Plan"):
+        sets = latest["sets"]
+        target_increase = max(1.0, 0.03 * latest_tonnage)  # Default 3% increase
+
         suggested_sets = []
         total_new_tonnage = 0
 
@@ -106,4 +105,3 @@ def tonnage_comparison():
         for i, plan in enumerate(suggested_sets):
             st.write(f"Set {i+1}: {plan}")
         st.markdown(f"**Total Tonnage (Projected):** `{total_new_tonnage:.1f}` lbs")
-

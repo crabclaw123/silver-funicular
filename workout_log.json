@@ -25,9 +25,7 @@
           }
         ],
         "equipment": "Dumbbell",
-        "tags": [
-          "Upper Chest"
-        ]
+        "tags": []
       },
       {
         "muscle_group": "Back",
@@ -91,7 +89,7 @@
       },
       {
         "muscle_group": "Arms",
-        "exercise": "Cable Tricep Push Down",
+        "exercise": "Push downs",
         "sets": [
           {
             "weight": 57.0,
@@ -106,7 +104,7 @@
             "reps": 10
           }
         ],
-        "equipment": "Dumbbell",
+        "equipment": "Machine",
         "tags": []
       }
     ]
@@ -201,7 +199,7 @@
       },
       {
         "muscle_group": "Forearms",
-        "exercise": "Reverse Curl",
+        "exercise": "Reverse Curls",
         "equipment": "Barbell",
         "sets": [
           {
@@ -365,10 +363,7 @@
             "reps": 8
           }
         ],
-        "tags": [
-          "Quads",
-          "Glute Max"
-        ]
+        "tags": []
       },
       {
         "muscle_group": "Legs",
@@ -388,9 +383,7 @@
             "reps": 10
           }
         ],
-        "tags": [
-          "Quads"
-        ]
+        "tags": []
       },
       {
         "muscle_group": "Shoulders",
@@ -414,9 +407,7 @@
             "reps": 9
           }
         ],
-        "tags": [
-          "Lateral Delts"
-        ]
+        "tags": []
       },
       {
         "muscle_group": "Arms",
@@ -440,9 +431,7 @@
             "reps": 10
           }
         ],
-        "tags": [
-          "Biceps Long Head"
-        ]
+        "tags": []
       },
       {
         "muscle_group": "Core",
@@ -462,9 +451,7 @@
             "reps": 16
           }
         ],
-        "tags": [
-          "Core"
-        ]
+        "tags": []
       }
     ]
   },
@@ -518,13 +505,11 @@
             "reps": 8
           }
         ],
-        "tags": [
-          "Latissimus Dorsi"
-        ]
+        "tags": []
       },
       {
         "muscle_group": "Shoulders",
-        "exercise": "Lateral Raise",
+        "exercise": "Lateral Raises",
         "equipment": "Machine",
         "sets": [
           {
@@ -556,9 +541,7 @@
             "reps": 22
           }
         ],
-        "tags": [
-          "Long Head"
-        ]
+        "tags": []
       },
       {
         "muscle_group": "Arms",
@@ -582,9 +565,7 @@
             "reps": 10
           }
         ],
-        "tags": [
-          "Biceps Short Head"
-        ]
+        "tags": []
       },
       {
         "muscle_group": "Forearms",
@@ -605,6 +586,108 @@
           }
         ],
         "tags": []
+      }
+    ]
+  },
+  {
+    "date": "2025-07-11",
+    "type": "Volume",
+    "exercises": [
+      {
+        "muscle_group": "Chest",
+        "exercise": "Incline Press",
+        "equipment": "Dumbbell",
+        "sets": [
+          {
+            "weight": 135.0,
+            "reps": 8
+          },
+          {
+            "weight": 135.0,
+            "reps": 6
+          },
+          {
+            "weight": 135.0,
+            "reps": 5
+          },
+          {
+            "weight": 130.0,
+            "reps": 5
+          },
+          {
+            "weight": 70.0,
+            "reps": 10
+          }
+        ],
+        "tags": []
+      },
+      {
+        "muscle_group": "Chest",
+        "exercise": "Dips",
+        "equipment": "Bodyweight",
+        "sets": [
+          {
+            "weight": 164.0,
+            "reps": 22
+          },
+          {
+            "weight": 164.0,
+            "reps": 14
+          },
+          {
+            "weight": 164.0,
+            "reps": 12
+          }
+        ],
+        "tags": [
+          "long head of triceps",
+          "anterior deltoids",
+          "lower chest"
+        ]
+      },
+      {
+        "muscle_group": "Chest",
+        "exercise": "Push downs",
+        "equipment": "Machine",
+        "sets": [
+          {
+            "weight": 52.5,
+            "reps": 12
+          },
+          {
+            "weight": 52.5,
+            "reps": 9
+          },
+          {
+            "weight": 47.5,
+            "reps": 10
+          },
+          {
+            "weight": 47.5,
+            "reps": 11
+          }
+        ],
+        "tags": [
+          "lateral head"
+        ]
+      },
+      {
+        "muscle_group": "Chest",
+        "exercise": "Flies",
+        "equipment": "Dumbbell",
+        "sets": [
+          {
+            "weight": 22.5,
+            "reps": 10
+          },
+          {
+            "weight": 20.0,
+            "reps": 12
+          }
+        ],
+        "tags": [
+          "chest"
+        ]
       }
     ]
   }

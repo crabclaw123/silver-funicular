@@ -12,5 +12,34 @@
     "equipment": "Machine",
     "tags": [],
     "favorite": false
+  },
+  {
+    "name": "Dips",
+    "muscle_group": "Chest",
+    "equipment": "Bodyweight",
+    "tags": [
+      "long head of triceps",
+      "anterior deltoids",
+      "lower chest"
+    ],
+    "favorite": false
+  },
+  {
+    "name": "Push downs",
+    "muscle_group": "Triceps",
+    "equipment": "Machine",
+    "tags": [
+      "lateral head"
+    ],
+    "favorite": false
+  },
+  {
+    "name": "Flies",
+    "muscle_group": "Chest",
+    "equipment": "Dumbbell",
+    "tags": [
+      "chest"
+    ],
+    "favorite": false
   }
 ]
