@@ -2,15 +2,181 @@
   {
     "name": "Incline Press",
     "muscle_group": "Chest",
-    "equipment": "Smith Machine",
-    "tags": [],
-    "favorite": true
+    "equipment": "Dumbbell",
+    "tags": [
+      "upper chest",
+      "front delts",
+      "triceps"
+    ]
   },
   {
-    "name": "Supine Press",
-    "muscle_group": "Chest",
+    "name": "Lateral Raises",
+    "muscle_group": "Shoulders",
+    "equipment": "Cable",
+    "tags": [
+      "lateral deltoid",
+      "shoulder hypertrophy"
+    ]
+  },
+  {
+    "name": "Cable Rear Delt Flies",
+    "muscle_group": "Shoulders",
+    "equipment": "Cable",
+    "tags": [
+      "rear deltoid",
+      "posture",
+      "upper back"
+    ]
+  },
+  {
+    "name": "Ab Crunch",
+    "muscle_group": "Core",
     "equipment": "Machine",
-    "tags": [],
+    "tags": [
+      "abs",
+      "core strength"
+    ]
+  },
+  {
+    "name": "Push Downs",
+    "muscle_group": "Triceps",
+    "equipment": "Cable",
+    "tags": [
+      "triceps",
+      "lateral head"
+    ],
+    "favorite": false
+  },
+  {
+    "name": "RDL",
+    "muscle_group": "Legs",
+    "equipment": "Machine",
+    "tags": [
+      "hamstrings",
+      "glutes",
+      "hip hinge"
+    ]
+  },
+  {
+    "name": "Wide Grip Rows",
+    "muscle_group": "Back",
+    "equipment": "Cable",
+    "tags": [
+      "lats",
+      "rhomboids",
+      "mid traps",
+      "upper back"
+    ],
+    "favorite": false
+  },
+  {
+    "name": "Bayesian Curl",
+    "muscle_group": "Biceps",
+    "equipment": "Cable",
+    "tags": [
+      "biceps",
+      "long head"
+    ],
+    "favorite": false
+  },
+  {
+    "name": "Reverse Curls",
+    "muscle_group": "Forearms",
+    "equipment": "Barbell",
+    "tags": [
+      "brachioradialis",
+      "grip",
+      "forearm thickness"
+    ]
+  },
+  {
+    "name": "Close Grip Lat Pulldown",
+    "muscle_group": "Back",
+    "equipment": "Cable",
+    "tags": [
+      "lats",
+      "teres major",
+      "scapular depression"
+    ]
+  },
+  {
+    "name": "Seated Leg Extension",
+    "muscle_group": "Legs",
+    "equipment": "Machine",
+    "tags": [
+      "quads",
+      "knee extension"
+    ]
+  },
+  {
+    "name": "Preacher Curls",
+    "muscle_group": "Biceps",
+    "equipment": "Machine",
+    "tags": [
+      "biceps",
+      "isolation",
+      "peak contraction"
+    ],
+    "favorite": false
+  },
+  {
+    "name": "Shrugs",
+    "muscle_group": "Shoulders",
+    "equipment": "Machine",
+    "tags": [
+      "trapezius",
+      "upper traps"
+    ]
+  },
+  {
+    "name": "Hack Squat",
+    "muscle_group": "Legs",
+    "equipment": "Machine",
+    "tags": [
+      "quads",
+      "glutes",
+      "knee dominant"
+    ]
+  },
+  {
+    "name": "Leg Extensions",
+    "muscle_group": "Legs",
+    "equipment": "Machine",
+    "tags": [
+      "quads",
+      "isolation"
+    ]
+  },
+  {
+    "name": "Hammer Curls",
+    "muscle_group": "Biceps",
+    "equipment": "Cable",
+    "tags": [
+      "brachialis",
+      "brachioradialis",
+      "thickness"
+    ],
+    "favorite": false
+  },
+  {
+    "name": "Straight Arm Pulldown",
+    "muscle_group": "Back",
+    "equipment": "Machine",
+    "tags": [
+      "lats",
+      "scapular control",
+      "isolation"
+    ]
+  },
+  {
+    "name": "Unilateral Overhead Raise",
+    "muscle_group": "Triceps",
+    "equipment": "Machine",
+    "tags": [
+      "long head",
+      "triceps",
+      "shoulder stability"
+    ],
     "favorite": false
   },
   {
@@ -18,28 +184,19 @@
     "muscle_group": "Chest",
     "equipment": "Bodyweight",
     "tags": [
-      "long head of triceps",
-      "anterior deltoids",
-      "lower chest"
-    ],
-    "favorite": false
-  },
-  {
-    "name": "Push downs",
-    "muscle_group": "Triceps",
-    "equipment": "Machine",
-    "tags": [
-      "lateral head"
-    ],
-    "favorite": false
+      "lower chest",
+      "triceps",
+      "anterior deltoids"
+    ]
   },
   {
     "name": "Flies",
     "muscle_group": "Chest",
     "equipment": "Dumbbell",
     "tags": [
-      "chest"
-    ],
-    "favorite": false
+      "chest",
+      "isolation",
+      "pec stretch"
+    ]
   }
 ]

@@ -5,6 +5,15 @@ import os
 
 EXERCISE_FILE = "saved_exercises.json"
 
+MUSCLE_GROUPS = [
+    "Chest", "Back", "Shoulders", "Arms", "Biceps", "Triceps", "Quads",
+    "Hamstrings", "Glutes", "Calves", "Forearms", "Core", "Full Body", "Other"
+]
+
+EQUIPMENT_TYPES = [
+    "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Smith Machine", "Other"
+]
+
 def load_saved_exercises():
     if not os.path.exists(EXERCISE_FILE):
         return []
@@ -20,24 +29,16 @@ def manage_saved_exercises():
 
     saved_exercises = load_saved_exercises()
 
-    # Show all saved exercises with edit/delete options
     for i, ex in enumerate(saved_exercises):
         with st.expander(f"{ex['name']} ({ex['muscle_group']})"):
             cols = st.columns([2, 2, 1, 1])
             name = cols[0].text_input("Exercise Name", ex["name"], key=f"name_{i}")
-            muscle = cols[1].selectbox("Muscle Group", [
-                "Chest", "Back", "Shoulders", "Arms", "Biceps", "Triceps", "Quads",
-                "Hamstrings", "Glutes", "Calves", "Forearms", "Core", "Full Body", "Other"
-            ], index=[
-                "Chest", "Back", "Shoulders", "Arms", "Biceps", "Triceps", "Quads",
-                "Hamstrings", "Glutes", "Calves", "Forearms", "Core", "Full Body", "Other"
-            ].index(ex["muscle_group"]), key=f"muscle_{i}")
 
-            equipment = cols[2].selectbox("Equipment", [
-                "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Smith Machine", "Other"
-            ], index=[
-                "Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Smith Machine", "Other"
-            ].index(ex["equipment"]), key=f"equipment_{i}")
+            muscle_index = MUSCLE_GROUPS.index(ex["muscle_group"]) if ex["muscle_group"] in MUSCLE_GROUPS else 0
+            muscle = cols[1].selectbox("Muscle Group", MUSCLE_GROUPS, index=muscle_index, key=f"muscle_{i}")
+
+            equipment_index = EQUIPMENT_TYPES.index(ex["equipment"]) if ex["equipment"] in EQUIPMENT_TYPES else 0
+            equipment = cols[2].selectbox("Equipment", EQUIPMENT_TYPES, index=equipment_index, key=f"equipment_{i}")
 
             favorite = cols[3].checkbox("⭐ Favorite", value=ex.get("favorite", False), key=f"fav_{i}")
 
@@ -65,11 +66,8 @@ def manage_saved_exercises():
     st.subheader("➕ Add New Exercise")
 
     new_name = st.text_input("New Exercise Name")
-    new_muscle = st.selectbox("Muscle Group", [
-        "Chest", "Back", "Shoulders", "Arms", "Biceps", "Triceps", "Quads",
-        "Hamstrings", "Glutes", "Calves", "Forearms", "Core", "Full Body", "Other"
-    ])
-    new_equipment = st.selectbox("Equipment", ["Dumbbell", "Barbell", "Cable", "Machine", "Bodyweight", "Smith Machine", "Other"])
+    new_muscle = st.selectbox("Muscle Group", MUSCLE_GROUPS)
+    new_equipment = st.selectbox("Equipment", EQUIPMENT_TYPES)
     new_tags = st.text_input("Tags (comma separated)")
     new_favorite = st.checkbox("⭐ Mark as Favorite")
 

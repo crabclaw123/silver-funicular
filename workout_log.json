@@ -25,7 +25,11 @@
           }
         ],
         "equipment": "Dumbbell",
-        "tags": []
+        "tags": [
+          "chest",
+          "anterior deltoids",
+          "upper chest"
+        ]
       },
       {
         "muscle_group": "Back",
@@ -45,7 +49,9 @@
           }
         ],
         "equipment": "Dumbbell",
-        "tags": []
+        "tags": [
+          "lateral deltoid"
+        ]
       },
       {
         "muscle_group": "Shoulders",
@@ -65,7 +71,9 @@
           }
         ],
         "equipment": "Dumbbell",
-        "tags": []
+        "tags": [
+          "rear deltoid"
+        ]
       },
       {
         "muscle_group": "Core",
@@ -85,7 +93,9 @@
           }
         ],
         "equipment": "Dumbbell",
-        "tags": []
+        "tags": [
+          "core strength"
+        ]
       },
       {
         "muscle_group": "Arms",
@@ -105,7 +115,10 @@
           }
         ],
         "equipment": "Machine",
-        "tags": []
+        "tags": [
+          "triceps",
+          "lateral head"
+        ]
       }
     ]
   },
@@ -135,7 +148,10 @@
             "reps": 8
           }
         ],
-        "tags": []
+        "tags": [
+          "hamstrings",
+          "glutes"
+        ]
       },
       {
         "muscle_group": "Back",
@@ -155,7 +171,10 @@
             "reps": 10
           }
         ],
-        "tags": []
+        "tags": [
+          "lats",
+          "rhomboids"
+        ]
       },
       {
         "muscle_group": "Shoulders",
@@ -175,7 +194,9 @@
             "reps": 12
           }
         ],
-        "tags": []
+        "tags": [
+          "lateral deltoid"
+        ]
       },
       {
         "muscle_group": "Arms",
@@ -195,7 +216,10 @@
             "reps": 12
           }
         ],
-        "tags": []
+        "tags": [
+          "biceps",
+          "long head"
+        ]
       },
       {
         "muscle_group": "Forearms",
@@ -215,7 +239,9 @@
             "reps": 12
           }
         ],
-        "tags": []
+        "tags": [
+          "brachioradialis"
+        ]
       }
     ]
   },
@@ -245,7 +271,9 @@
             "reps": 7
           }
         ],
-        "tags": []
+        "tags": [
+          "lats"
+        ]
       },
       {
         "muscle_group": "Legs",
@@ -265,7 +293,9 @@
             "reps": 7
           }
         ],
-        "tags": []
+        "tags": [
+          "quads"
+        ]
       },
       {
         "muscle_group": "Arms",
@@ -289,7 +319,10 @@
             "reps": 4
           }
         ],
-        "tags": []
+        "tags": [
+          "biceps",
+          "isolation"
+        ]
       },
       {
         "muscle_group": "Shoulders",
@@ -313,7 +346,9 @@
             "reps": 20
           }
         ],
-        "tags": []
+        "tags": [
+          "upper traps"
+        ]
       },
       {
         "muscle_group": "Forearms",
@@ -333,7 +368,10 @@
             "reps": 11
           }
         ],
-        "tags": []
+        "tags": [
+          "brachioradialis",
+          "long head"
+        ]
       }
     ]
   },
@@ -363,7 +401,10 @@
             "reps": 8
           }
         ],
-        "tags": []
+        "tags": [
+          "quads",
+          "glutes"
+        ]
       },
       {
         "muscle_group": "Legs",
@@ -383,7 +424,9 @@
             "reps": 10
           }
         ],
-        "tags": []
+        "tags": [
+          "quads"
+        ]
       },
       {
         "muscle_group": "Shoulders",
@@ -407,7 +450,9 @@
             "reps": 9
           }
         ],
-        "tags": []
+        "tags": [
+          "lateral deltoid"
+        ]
       },
       {
         "muscle_group": "Arms",
@@ -431,7 +476,11 @@
             "reps": 10
           }
         ],
-        "tags": []
+        "tags": [
+          "biceps",
+          "brachialis",
+          "brachioradialis"
+        ]
       },
       {
         "muscle_group": "Core",
@@ -451,7 +500,9 @@
             "reps": 16
           }
         ],
-        "tags": []
+        "tags": [
+          "core strength"
+        ]
       }
     ]
   },
@@ -481,7 +532,11 @@
             "reps": 11
           }
         ],
-        "tags": []
+        "tags": [
+          "chest",
+          "anterior deltoids",
+          "upper chest"
+        ]
       },
       {
         "muscle_group": "Back",
@@ -505,7 +560,10 @@
             "reps": 8
           }
         ],
-        "tags": []
+        "tags": [
+          "lats",
+          "teres major"
+        ]
       },
       {
         "muscle_group": "Shoulders",
@@ -525,7 +583,9 @@
             "reps": 11
           }
         ],
-        "tags": []
+        "tags": [
+          "lateral head"
+        ]
       },
       {
         "muscle_group": "Arms",
@@ -541,7 +601,10 @@
             "reps": 22
           }
         ],
-        "tags": []
+        "tags": [
+          "triceps",
+          "long head"
+        ]
       },
       {
         "muscle_group": "Arms",
@@ -565,7 +628,10 @@
             "reps": 10
           }
         ],
-        "tags": []
+        "tags": [
+          "biceps",
+          "isolation"
+        ]
       },
       {
         "muscle_group": "Forearms",
@@ -585,7 +651,9 @@
             "reps": 12
           }
         ],
-        "tags": []
+        "tags": [
+          "brachioradialis"
+        ]
       }
     ]
   },
@@ -619,7 +687,11 @@
             "reps": 10
           }
         ],
-        "tags": []
+        "tags": [
+          "chest",
+          "anterior deltoids",
+          "upper chest"
+        ]
       },
       {
         "muscle_group": "Chest",
@@ -640,9 +712,10 @@
           }
         ],
         "tags": [
-          "long head of triceps",
           "anterior deltoids",
-          "lower chest"
+          "lower chest",
+          "triceps",
+          "long head"
         ]
       },
       {

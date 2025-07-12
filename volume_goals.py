@@ -19,7 +19,7 @@ def volume_goal_ui():
     goals = load_volume_goals()
 
     for muscle in [
-        "Chest", "Back", "Legs", "Shoulders", "Arms",
+        "Chest", "Back", "Legs", "Shoulders", "Biceps", "Triceps",
         "Glutes", "Core", "Forearms", "Calves"
     ]:
         val = st.sidebar.number_input(
